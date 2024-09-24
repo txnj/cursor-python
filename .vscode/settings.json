@@ -1,6 +1,6 @@
 {
     "editor.fontSize": 14,
-    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'MesloLGS Nerd Font Mono',Consolas,'Courier New',monospace",
     // 📝powershelel配置
     "terminal.integrated.profiles.windows": {
         "pwsh": {
@@ -8,8 +8,13 @@
             "args": [],
             "icon": "terminal-powershell"
         },
+        "nu": {
+            "path": "c:/scoop/shims/nu.exe",
+            "args": [],
+        },
     },
-    "terminal.integrated.defaultProfile.windows": "pwsh",
+    // "terminal.integrated.defaultProfile.windows": "pwsh",
+    "terminal.integrated.defaultProfile.windows": "nu", //nushell
     // 📝toml格式化配置
     "evenBetterToml.formatter.indentTables": true, // table缩进
     "evenBetterToml.formatter.indentEntries": true, // entries缩进
@@ -36,12 +41,12 @@
         "python"
     ],
     // 📝皮肤
-    "workbench.colorTheme": "Default Dark Modern",
+    // "workbench.colorTheme": "Default Light Modern",
     // pylint
     // useBundled:选项意味着VSCode将使用扩展自带的Pylint版本，而不是使用您系统中或项目中安装的Pylint
     "pylint.importStrategy": "useBundled",
     "pylint.args": [
         "--disable=missing-module-docstring",
         "--disable=C0116,C0114,C0412,C0115,W0612,W0631,W0703,W0621,W0613,W0611,W1308,C0411,C0111,C0103,C0301,C0304,C0305,E1101,R0913,R0914,R0915,R0903"
-    ]
+    ],
 }
