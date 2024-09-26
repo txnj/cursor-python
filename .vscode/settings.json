@@ -13,7 +13,7 @@
             "args": [],
         },
     },
-    "terminal.integrated.defaultProfile.windows": "pwsh",
+    "terminal.integrated.defaultProfile.windows": "nu",
     // "terminal.integrated.defaultProfile.windows": "nu", //nushell
     // 📝toml格式化配置
     "evenBetterToml.formatter.indentTables": true, // table缩进
@@ -37,19 +37,21 @@
             "source.organizeImports.ruff": "explicit", // 保存时自动排序 import 语句
         },
     },
-    // 📝notebook
+    "python.analysis.extraPaths": [],
+    // 📝jupyter.notebook
+    "jupyter.notebookFileRoot": "${workspaceFolder}", // 📌
     "notebook.formatOnSave.enabled": true, // notebook 保存时自动格式化
     "notebook.output.textLineLimit": 18,
     "notebook.codeActionsOnSave": {
         "notebook.source.fixAll": "explicit", // notebook 保存时自动修复可修复的 lint 错误
         "notebook.source.organizeImports": "explicit", // notebook 保存时自动排序 import 语句
     },
-    "editor.formatOnSave": false, // 保存时格式化
+    "editor.formatOnSave": true, // 保存时格式化
     // 📝彩虹缩进 indent-rainbow 配置
     "indentRainbow.ignoreErrorLanguages": [
         "python"
     ],
-    // env
+    // 📝env
     "python.envFile": "${workspaceFolder}/.env",
     "terminal.integrated.env.windows": {
         "PYTHONPATH": "${workspaceFolder}"
@@ -60,5 +62,9 @@
     "terminal.integrated.env.osx": {
         "PYTHONPATH": "${workspaceFolder}"
     },
-    "python.analysis.extraPaths": [],
+    // 📝code-runner
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "python": "set PYTHONPATH=. && python -u",
+    }
 }

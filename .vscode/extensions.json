@@ -15,6 +15,7 @@
         "adamhartford.vscode-base64",
         "vscode-icons-team.vscode-icons",
         "TheNuProjectContributors.vscode-nushell-lang",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "formulahendry.code-runner",
     ]
 }
