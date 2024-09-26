@@ -4,7 +4,7 @@
     // 📝powershelel配置
     "terminal.integrated.profiles.windows": {
         "pwsh": {
-            "path": "c:/scoop/apps/pwsh/current/pwsh.exe",
+            "path": "c:/scoop/shims/pwsh.exe",
             "args": [],
             "icon": "terminal-powershell"
         },
@@ -13,8 +13,8 @@
             "args": [],
         },
     },
-    // "terminal.integrated.defaultProfile.windows": "pwsh",
-    "terminal.integrated.defaultProfile.windows": "nu", //nushell
+    "terminal.integrated.defaultProfile.windows": "pwsh",
+    // "terminal.integrated.defaultProfile.windows": "nu", //nushell
     // 📝toml格式化配置
     "evenBetterToml.formatter.indentTables": true, // table缩进
     "evenBetterToml.formatter.indentEntries": true, // entries缩进
@@ -44,12 +44,21 @@
         "notebook.source.fixAll": "explicit", // notebook 保存时自动修复可修复的 lint 错误
         "notebook.source.organizeImports": "explicit", // notebook 保存时自动排序 import 语句
     },
-    "python.analysis.extraPaths": [
-        ".venv/Lib/site-packages"
-    ],
     "editor.formatOnSave": false, // 保存时格式化
     // 📝彩虹缩进 indent-rainbow 配置
     "indentRainbow.ignoreErrorLanguages": [
         "python"
     ],
+    // env
+    "python.envFile": "${workspaceFolder}/.env",
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "python.analysis.extraPaths": [],
 }
