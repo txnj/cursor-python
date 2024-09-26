@@ -25,6 +25,8 @@
     "evenBetterToml.formatter.compactEntries": false, // 省略 `=` 周围的空格
     "evenBetterToml.formatter.arrayTrailingComma": true, // 为多行数组添加尾随逗号
     "evenBetterToml.formatter.arrayAutoExpand": true, // 自动将数组扩展为多行
+    // 📝ruff
+    "ruff.fixAll": true,
     "[python]": {
         // 📝yapf配置(格式化工具)
         // "editor.defaultFormatter": "eeyore.yapf",
@@ -39,13 +41,13 @@
     "notebook.formatOnSave.enabled": true, // notebook 保存时自动格式化
     "notebook.output.textLineLimit": 18,
     "notebook.codeActionsOnSave": {
-        "source.fixAll": "explicit", // notebook 保存时自动修复可修复的 lint 错误
-        "source.organizeImports": "explicit" // notebook 保存时自动排序 import 语句
+        "notebook.source.fixAll": "explicit", // notebook 保存时自动修复可修复的 lint 错误
+        "notebook.source.organizeImports": "explicit", // notebook 保存时自动排序 import 语句
     },
     "python.analysis.extraPaths": [
         ".venv/Lib/site-packages"
     ],
-    "editor.formatOnSave": true, // 保存时格式化
+    "editor.formatOnSave": false, // 保存时格式化
     // 📝彩虹缩进 indent-rainbow 配置
     "indentRainbow.ignoreErrorLanguages": [
         "python"
