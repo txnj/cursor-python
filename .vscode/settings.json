@@ -25,12 +25,22 @@
     "evenBetterToml.formatter.compactEntries": false, // 省略 `=` 周围的空格
     "evenBetterToml.formatter.arrayTrailingComma": true, // 为多行数组添加尾随逗号
     "evenBetterToml.formatter.arrayAutoExpand": true, // 自动将数组扩展为多行
-    // 📝yapf配置(格式化工具)
     "[python]": {
-        "editor.defaultFormatter": "eeyore.yapf",
+        // 📝yapf配置(格式化工具)
+        // "editor.defaultFormatter": "eeyore.yapf",
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
+            "source.fixAll.ruff": "explicit", // 保存时自动修复可修复的 lint 错误
+            "source.organizeImports.ruff": "explicit", // 保存时自动排序 import 语句
         },
+    },
+    // 📝notebook
+    "notebook.formatOnSave.enabled": true, // notebook 保存时自动格式化
+    "notebook.output.textLineLimit": 18,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit", // notebook 保存时自动修复可修复的 lint 错误
+        "source.organizeImports": "explicit" // notebook 保存时自动排序 import 语句
     },
     "python.analysis.extraPaths": [
         ".venv/Lib/site-packages"
@@ -39,14 +49,5 @@
     // 📝彩虹缩进 indent-rainbow 配置
     "indentRainbow.ignoreErrorLanguages": [
         "python"
-    ],
-    // 📝皮肤
-    // "workbench.colorTheme": "Default Light Modern",
-    // pylint
-    // useBundled:选项意味着VSCode将使用扩展自带的Pylint版本，而不是使用您系统中或项目中安装的Pylint
-    "pylint.importStrategy": "useBundled",
-    "pylint.args": [
-        "--disable=missing-module-docstring",
-        "--disable=C0116,C0114,C0412,C0115,W0612,W0631,W0703,W0621,W0613,W0611,W1308,C0411,C0111,C0103,C0301,C0304,C0305,E1101,R0913,R0914,R0915,R0903"
     ],
 }
