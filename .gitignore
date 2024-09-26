@@ -10,7 +10,6 @@ tg_external.py
 t.yml
 test.py
 tg.config.json
-*.txt
 todo
 
 
