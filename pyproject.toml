@@ -1,34 +1,16 @@
-[tool.poetry]
-    authors     = ["hjs <hjs9987@outlook.com>"]
-    description = ""
-    name        = "cursor-python"
-    readme      = "README.md"
-    version     = "0.1.0"
+[project]
+name = "cursor-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.9.2",
+    "numpy>=2.1.1",
+    "pandas>=2.2.3",
+]
 
-    [tool.poetry.dependencies]
-        matplotlib = "^3.9.2"
-        numpy      = "<2.0.0"
-        pandas     = "^2.2.3"
-        python     = "^3.10"
-
-
-    [tool.poetry.group.dev.dependencies]
-        ipykernel = "^6.29.5"
-        yapf      = "^0.40.2"
-
-[build-system]
-    build-backend = "poetry.core.masonry.api"
-    requires      = ["poetry-core"]
-
-[[tool.poetry.source]]
-    name     = "tencent"
-    priority = "primary"
-    url      = "https://mirrors.cloud.tencent.com/pypi/simple"
-
-[[tool.poetry.source]]
-    name     = "torch"
-    priority = "supplemental"
-    url      = "https://download.pytorch.org/whl/cu118"
-
-[tool.poetry.scripts]
-    hello = 'tests.hello:say_hello'
+[tool.uv]
+dev-dependencies = [
+    "ipykernel>=6.29.5",
+]
