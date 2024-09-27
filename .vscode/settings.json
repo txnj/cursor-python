@@ -40,6 +40,7 @@
     "python.analysis.extraPaths": [],
     // 📝jupyter.notebook
     "jupyter.notebookFileRoot": "${workspaceFolder}", // 📌
+    "notebook.defaultFormatter": "charliermarsh.ruff",
     "notebook.formatOnSave.enabled": true, // notebook 保存时自动格式化
     "notebook.output.textLineLimit": 18,
     "notebook.codeActionsOnSave": {
@@ -66,5 +67,10 @@
     "code-runner.clearPreviousOutput": true,
     "code-runner.executorMap": {
         "python": "set PYTHONPATH=. && python -u",
-    }
+    },
+    "yaml.format.enable": true,
+    "json.format.enable": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Default Light Modern",
+    "terminal.integrated.enableMultiLinePasteWarning": "auto",
 }
