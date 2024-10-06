@@ -66,8 +66,9 @@
     // 📝code-runner
     "code-runner.clearPreviousOutput": true,
     "code-runner.executorMap": {
-        "python": "set PYTHONPATH=. && python -u",
-    },
+		"python": "set PYTHONPATH=. && set PYTHONIOENCODING=utf-8 && $pythonPath $fullFileName",
+		"typescript": "node --loader ts-node/esm --disable-warning=ExperimentalWarning"
+	},
     "yaml.format.enable": true,
     "json.format.enable": true,
     "workbench.iconTheme": "vscode-icons",
