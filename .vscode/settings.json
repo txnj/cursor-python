@@ -71,6 +71,6 @@
     "yaml.format.enable": true,
     "json.format.enable": true,
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Noctis Uva",
     "terminal.integrated.enableMultiLinePasteWarning": "auto",
 }
